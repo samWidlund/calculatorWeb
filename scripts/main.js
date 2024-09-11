@@ -1,7 +1,11 @@
+const startButton = document.getElementById('startButton');
+const startWindow = document.getElementById('startWindow');
+const mainContainer = document.getElementById('mainContainer');
 const displayAnswer = document.getElementById('displayAnswer');
 const allButtons = document.getElementById('allButtons');
 
 let startAnswer = "";
+let answer = "";
 let buttonValue = "";
 let totalDisplayNumber = "";
 let inputList = [];
@@ -11,8 +15,14 @@ let calcFirstValue = 0;
 let calcLastValue = 0;
 let operator = "";
 
+startButton.addEventListener('click', function(event) {
+    startWindow.style.display = "none";
+    mainContainer.style.visibility = "visible"; // FIX!
+    });
+
 displayAnswer.textContent = startAnswer; // set start answer to none
 
+// if a sequence of calculations is wanted, press "=" after each calculation for it to work properly
 allButtons.addEventListener('click', function(event) {
     if (event.target.tagName === 'BUTTON') {
         buttonValue = event.target.textContent;
@@ -56,33 +66,38 @@ allButtons.addEventListener('click', function(event) {
             calcLastValue = inputList[inputList.length - 2];
 
             console.log("operator:" + operator);
+            console.log("inputList:" + inputList);
             console.log("calcFirstValue:" + calcFirstValue);
             console.log("calcLastValue:" + calcLastValue);
 
             if (operator == "+"){
-                let answer = Number(calcFirstValue) + Number(calcLastValue);
+                answer = Number(calcFirstValue) + Number(calcLastValue);
                 totalDisplayNumber = answer;
                 console.log("additionAnswer:" + answer);
             }
             else if (operator == "-"){
-                let answer = Number(calcFirstValue) - Number(calcLastValue);
+                answer = Number(calcFirstValue) - Number(calcLastValue);
                 totalDisplayNumber = answer;
                 console.log("subtractionAnswer:" + answer);
             }
             else if (operator == "/"){
-                let answer = Number(calcFirstValue) / Number(calcLastValue);
+                answer = Number(calcFirstValue) / Number(calcLastValue);
                 totalDisplayNumber = answer;
                 console.log("divisionAnswer:" + answer); 
             }
             else if (operator == "x"){
-                let answer = Number(calcFirstValue) * Number(calcLastValue);
+                answer = Number(calcFirstValue) * Number(calcLastValue);
                 totalDisplayNumber = answer;
                 console.log("multiplicationAnswer:" + answer);
             }
             else {
                 console.log("error in calcuation");
             }
-            // Append answer in inputList to sequence of calculations ?
+
+            inputList.push(answer);
+            console.log("addedAnswerInputList:" + inputList)
+
+            // TODO: push each inserted value to inputList to do multiple calculations at once?
     }
 }
 }); 

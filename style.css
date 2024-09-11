@@ -1,8 +1,3 @@
-h1{
-    text-align:center;
-    font-size:x-large;
-}
-
 html, body {
     height: 100vh; 
     margin: 0; 
@@ -15,7 +10,37 @@ html, body {
     align-items: center;
 }
 
+#startWindow {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid black;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+}
+
+#samuelSignature {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#startButton {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: red;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    padding: 6px;
+}
+
 #mainContainer {
+    visibility:hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
