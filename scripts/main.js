@@ -17,7 +17,7 @@ let operator = "";
 
 startButton.addEventListener('click', function(event) {
     startWindow.style.display = "none";
-    mainContainer.style.visibility = "visible"; // FIX!
+    mainContainer.style.display = "flex"; // FIX!
     });
 
 displayAnswer.textContent = startAnswer; // set start answer to none
