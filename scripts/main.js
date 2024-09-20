@@ -17,7 +17,7 @@ let operator = "";
 
 startButton.addEventListener('click', function(event) {
     startWindow.style.display = "none";
-    mainContainer.style.display = "flex"; // FIX!
+    mainContainer.style.display = "flex";
     });
 
 displayAnswer.textContent = startAnswer; // set start answer to none
@@ -72,22 +72,22 @@ allButtons.addEventListener('click', function(event) {
 
             if (operator == "+"){
                 answer = Number(calcFirstValue) + Number(calcLastValue);
-                totalDisplayNumber = answer;
+                totalDisplayNumber = answer.toFixed(3);
                 console.log("additionAnswer:" + answer);
             }
             else if (operator == "-"){
                 answer = Number(calcFirstValue) - Number(calcLastValue);
-                totalDisplayNumber = answer;
+                totalDisplayNumber = answer.toFixed(3);
                 console.log("subtractionAnswer:" + answer);
             }
             else if (operator == "/"){
                 answer = Number(calcFirstValue) / Number(calcLastValue);
-                totalDisplayNumber = answer;
+                totalDisplayNumber = answer.toFixed(3);
                 console.log("divisionAnswer:" + answer); 
             }
             else if (operator == "x"){
                 answer = Number(calcFirstValue) * Number(calcLastValue);
-                totalDisplayNumber = answer;
+                totalDisplayNumber = answer.toFixed(3);
                 console.log("multiplicationAnswer:" + answer);
             }
             else {
