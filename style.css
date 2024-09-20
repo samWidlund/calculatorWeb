@@ -107,11 +107,7 @@ html, body {
     text-align: center;
 }
 
-#equals{
-    background-color: lightgray;
-}
-
-#clear{
+#equals, #clear{
     background-color: lightgray;
 }
 

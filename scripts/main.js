@@ -72,22 +72,22 @@ allButtons.addEventListener('click', function(event) {
 
             if (operator == "+"){
                 answer = Number(calcFirstValue) + Number(calcLastValue);
-                totalDisplayNumber = answer.toFixed(3);
+                totalDisplayNumber = answer.toFixed(2);
                 console.log("additionAnswer:" + answer);
             }
             else if (operator == "-"){
                 answer = Number(calcFirstValue) - Number(calcLastValue);
-                totalDisplayNumber = answer.toFixed(3);
+                totalDisplayNumber = answer.toFixed(2);
                 console.log("subtractionAnswer:" + answer);
             }
             else if (operator == "/"){
                 answer = Number(calcFirstValue) / Number(calcLastValue);
-                totalDisplayNumber = answer.toFixed(3);
+                totalDisplayNumber = answer.toFixed(2);
                 console.log("divisionAnswer:" + answer); 
             }
             else if (operator == "x"){
                 answer = Number(calcFirstValue) * Number(calcLastValue);
-                totalDisplayNumber = answer.toFixed(3);
+                totalDisplayNumber = answer.toFixed(2);
                 console.log("multiplicationAnswer:" + answer);
             }
             else {
@@ -96,8 +96,6 @@ allButtons.addEventListener('click', function(event) {
 
             inputList.push(answer);
             console.log("addedAnswerInputList:" + inputList)
-
-            // TODO: push each inserted value to inputList to do multiple calculations at once?
     }
 }
 }); 
@@ -106,4 +104,4 @@ function updateDisplayAnswer() {
     displayAnswer.textContent = totalDisplayNumber;
 }
 
-setInterval(updateDisplayAnswer, 500); // run the update display function every 0.5 seconds
+setInterval(updateDisplayAnswer, 500); // run every 0.5 second
