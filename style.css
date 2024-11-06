@@ -115,3 +115,8 @@ html, body {
     font-size: xx-large;
     border-radius: 5px; 
 }
+
+.buttons:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
